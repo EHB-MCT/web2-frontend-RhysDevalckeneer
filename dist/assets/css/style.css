@@ -25,7 +25,7 @@ h1 {
 
 header {
     width: 100vw;
-    height: 50vh;
+    height: 35vh;
     background-image: url('../img/bg.jpg');
     background-size: cover;
     background-position: center;
@@ -56,7 +56,7 @@ header .container nav .col-md-6 li a>i{
 }
 
 main > section {
-    padding: 5rem 0;
+    padding-top: 5rem;
 }
 
 main #fav-movies .container .row .col-md-4 img{
@@ -66,6 +66,11 @@ main #fav-movies .container .row .col-md-4 img{
 
 main #faq .container .row .accordion .accordion-item .accordion-header .accordion-button {
     font-weight: 800;
+}
+
+main #faq .container .row .accordion .accordion-item .accordion-header .accordion-button:focus {
+    border: none;
+    box-shadow: none;
 }
 
 main #faq .container .row .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
@@ -78,6 +83,7 @@ main #faq .container .row .accordion .accordion-item .accordion-colapse .accordi
 }
 
 aside {
+    margin-top: 5rem;
     background: linear-gradient(90deg, rgba(37,99,235,1) 0%, rgba(59,130,246,1) 100%);
     padding: 3rem 0
 }
