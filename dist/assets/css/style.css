@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+/* variables */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #27272A;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* end variables */
+
+header {
+    width: 100vw;
+    height: 50vh;
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+header .container .row .col-md-6 img {
+    width: 28%;
+}
+
+header .container nav {
+    padding: 1rem 0;
+}
+
+header .container nav .col-md-6 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+header .container nav .col-md-6 li a {
+    color: #FFF;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header .container nav .col-md-6 li a>i{
+    margin-right: 8px;
+}
+
+main > section {
+    padding: 5rem 0;
+}
+
+main #fav-movies .container .row .col-md-4 img{
+    width: 100%;
+    border-radius: 4px;
+}
+
+main #faq .container .row .accordion .accordion-item .accordion-header .accordion-button {
+    font-weight: 800;
+}
+
+main #faq .container .row .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+    background-color: #fff;
+    color: rgba(37,99,235,1);
+}
+
+main #faq .container .row .accordion .accordion-item .accordion-colapse .accordion-body {
+    font-family: 'Roboto', sans-serif;
+}
+
+aside {
+    background: linear-gradient(90deg, rgba(37,99,235,1) 0%, rgba(59,130,246,1) 100%);
+    padding: 3rem 0
+}
+
+aside .container .row .col-md-6 h3 {
+    color: #FFF;
+}
+
+aside .container .row .col-md-6 p {
+    color: #fafafa;
+    font-weight: 400;
+}
+
+aside .container .row .col-md-6 .container .row .col-md-6 {
+    margin-top: 1rem;
+}
+
+aside .container .row .col-md-6 .container .row .col-md-6 img {
+    width: 85%;
+}
+
+footer {
+    background-color: #F3F4F6;
+    padding: 3rem 0;
+}
+
+footer .container #footer-top .col-md-3 img {
+    width: 60%;
+}
