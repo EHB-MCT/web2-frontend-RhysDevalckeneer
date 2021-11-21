@@ -21,37 +21,47 @@ h1 {
     text-align: center;
 }
 
+;.container {
+    width: 60%;
+    max-width: 60%;
+}
+
 /* end variables */
 
 header {
     width: 100vw;
-    height: 35vh;
+    height: 45vh;
     background-image: url('../img/bg.jpg');
     background-size: cover;
     background-position: center;
 }
 
-header .container .row .col-md-6 img {
-    width: 28%;
+header .container-sm .row .col-md-6 img {
+    width: 24%;
+    margin-top: 1rem;
 }
 
-header .container nav {
+header .container-sm nav {
     padding: 1rem 0;
 }
 
-header .container nav .col-md-6 {
+header .container-sm nav .col-md-6 {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
 }
 
-header .container nav .col-md-6 li a {
+header .container-sm nav .col-md-6 li {
+    list-style: none;
+}
+
+header .container-sm nav .col-md-6 li a {
     color: #FFF;
     font-weight: bold;
     text-decoration: none;
 }
 
-header .container nav .col-md-6 li a>i{
+header .container-sm nav .col-md-6 li a>i{
     margin-right: 8px;
 }
 
@@ -90,6 +100,7 @@ aside {
 
 aside .container .row .col-md-6 h3 {
     color: #FFF;
+    font-weight: 800;
 }
 
 aside .container .row .col-md-6 p {
@@ -102,7 +113,7 @@ aside .container .row .col-md-6 .container .row .col-md-6 {
 }
 
 aside .container .row .col-md-6 .container .row .col-md-6 img {
-    width: 85%;
+    width: 65%;
 }
 
 footer {
