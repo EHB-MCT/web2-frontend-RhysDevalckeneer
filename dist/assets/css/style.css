@@ -1,0 +1,306 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #FFF;
+}
+
+h1, h2, h3, h4, h5, h6, p, li a {
+    /* font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji; */
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 16px;
+    color: #4B5563;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+h5 {
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: .6rem;
+    font-size: 24px;
+}
+
+h6 {
+    margin-bottom: 12px;
+    color: #bfdbfe;
+    font-weight: 800;
+}
+
+p {
+    line-height: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    width: 18%;
+}
+
+/** Header **/
+header {
+    width: 100vw;
+    height: 50vh;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+}
+
+header nav {
+    padding: 1.5rem 0;
+}
+
+header nav .row .col-4 ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav .row .col-4 ul li a {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+header nav .row .col-4 ul li a i {
+    margin-right: 6px;
+}
+
+
+#favoMovie, #pricing {
+    padding: 4rem 0 6rem 0;
+}
+
+#pricing {
+    background-color: #eff6ff;
+    padding: 2rem 10rem;
+    margin-bottom: 5rem;
+}
+
+.plans {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.plan {
+    background-color: #FFF;
+    padding: 3rem 4rem;
+    margin-right: 1rem;
+}
+
+.plan h4 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.plan p {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.price {
+    font-size: 42px;
+    font-weight: 300;
+}
+
+.price b{
+    font-weight: 700;
+}
+
+.plan ul {
+    padding: 0;
+    margin: 2.5rem 0;
+}
+
+.plan ul li {
+    margin: .5rem 0;
+    font-size: 15px;
+}
+
+.pricing-button {
+    display: block;
+    border: 2px solid #27272A;
+    color: #27272A;
+    padding: .6rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.pricing-button:hover {
+    color: #27272A;
+}
+
+#faq {
+    padding-bottom: 3rem;
+}
+
+#accordionExample {
+    width: 65%;
+    margin: auto;
+}
+
+
+#search .container {
+    padding: 0;
+    width: 100%;
+    transform: translate(0, -50%);
+    background-color: #FFF;
+    box-shadow: 0px 0px 12px 0px rgba(97,98,102,0.2);
+}
+
+#search .container .row { 
+    padding: 0;
+    border-radius: 4px;
+}
+
+#search .container .row .col-10 {
+    overflow: hidden;
+    border-radius: 4px 0 0 4px;
+}
+
+#search .container .row .col-10 input{ 
+    width: 100%;
+    padding: .85rem 1.5rem;
+    border: 0;
+}
+
+#search .container .row .col-2 {
+    overflow: hidden;
+    border-radius: 0 4px 4px 0;
+}
+
+
+button {
+    width: 100%;
+    padding: .85rem 0;
+    background-color: #27272A;
+    color: #FFF;
+    border: 0;
+    font-weight: 700;
+    
+}
+
+#search .container .row .col-2 button i {
+    margin-right: 8px;
+}
+
+/* #upcomingList {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: block;
+    margin-bottom: 4rem;
+}
+
+#popularList {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: block;
+    margin-bottom: 4rem;
+}
+
+.upcomingMovie {
+    display: inline-block;
+    float: none;
+}
+
+.popularMovie {
+    display: inline-block;
+    float: none;
+} */
+
+#searchedMovies .poster {
+    margin: 1rem 0;
+    position: relative;
+}
+
+#searchedMovies .poster .fa-bookmark {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+}
+
+#searchedMovies .poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#watchList .col-2 img {
+    width: 100%;
+}
+
+main {
+    padding: 2rem 0;
+}
+
+
+/** Banner **/
+.banner {
+    background-color: #F3F4F6;
+    padding: 2.5rem 0;
+}
+
+.banner .container .row .col-6 p {
+    font-weight: 400;
+}
+
+.banner .container .row .col-6 .container .row .col-6 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.banner .container .row .col-6 .container .row .col-6 img {
+    width: 80%;
+}
+
+/** Footer **/
+footer {
+    background-color: #2563eb;
+    color: #FFF;
+}
+
+footer #footer-top {
+    padding: 4rem 0;
+}
+
+footer #footer-top .col-3 ul{
+padding: 0;
+}
+
+footer #footer-top .col-3 .logo{
+    width: 50%;
+}
+
+footer #footer-top .col-3 ul li a {
+    font-weight: 500;
+    color: #eff6ff;
+}
+
+footer #footer-bottom {
+    padding: 1.5rem 0;
+    border-top: 1px solid #93c5fd;
+}
+
+footer #footer-bottom .col-6 p{
+    font-size: 12px;
+    font-weight: 300;
+    color: #93c5fd;
+}

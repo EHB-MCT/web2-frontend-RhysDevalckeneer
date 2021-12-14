@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍿 Search - MovieTime</title>
+    <script src="https://kit.fontawesome.com/e4e516d4d8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/main.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="row">
+                <div class="col-8">
+                    <img src="./assets/img/movietime_logo.png" class="logo">
+                </div>
+                <div class="col-4">
+                    <ul>
+                        <li>
+                            <a href="./index.html"><i class="fas fa-home"></i> Home</a>
+                        </li>
+                        <li>
+                            <a href="./search.html"><i class="fas fa-search"></i> Search</a>
+                        </li>
+                        <li>
+                            <a href="./watchlist.html"><i class="fas fa-plus"></i> Watchlist</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="search">
+        <section class="container">
+            <form class="row" id="searchForm">
+                <div class="col-10">
+                    <input placeholder="Search for a movie..." name="" id="searchInput">
+                </div>
+                <div class="col-2">
+                    <button type="submit"><i class="fas fa-search"></i> Search</button>
+                </div>
+                </form>
+            </form>
+        </section>
+    </section>
+
+    <main>
+        <div class="container">
+            <div class="row" id="searchedMovies">
+
+            </div>
+        </div>
+    </main>
+
+    <aside class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h5>Add movies on the go!</h5>
+                    <p>Download our mobile app and add movies to your list from anywhere.</p>
+                </div>
+                <div class="col-6">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="./assets/img/google_playstore.png">
+                            </div>
+                            <div class="col-6">
+                                <img src="./assets/img/apple_appstore.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <footer>
+        <div class="container">
+            <div class="row" id="footer-top">
+                <div class="col-3">
+                    <img src="./assets/img/movietime_logo.png" class="logo">
+                </div>
+                <div class="col-3">
+                    <h6>Company</h6>
+                    <ul>
+                        <li>
+                            <a href="#">About us</a>
+                        </li>
+                        <li>
+                            <a href="#">Careers</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#">Press</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h6>Platform</h6>
+                    <ul>
+                        <li>
+                            <a href="#">How it works</a>
+                        </li>
+                        <li>
+                            <a href="#">Find a movie</a>
+                        </li>
+                        <li>
+                            <a href="#">Help</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h6>Privacy</h6>
+                    <ul>
+                        <li>
+                            <a href="#">Terms of Usage</a>
+                        </li>
+                        <li>
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#">Cookies</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row" id="footer-bottom">
+                <div class="col-6">
+                    <p>&copy; 2021 Rhys Devalckeneer. All rights reserved.</p>
+                </div>
+                <div class="col-6">
+                    <p>footer right</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
