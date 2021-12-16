@@ -2,9 +2,14 @@ const path = require('path');
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.js',
+    entry: {
+        main: './src/index.js',
+        search: './src/search.js',
+        movie: './src/movie.js',
+        watchlist: './src/watchlist.js',
+      },
     output: {
-        filename: 'main.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'docs/assets/js'),
     },
 };

@@ -27,30 +27,44 @@ function searchMovie(query) {
 
         data.forEach(movie => {
             searchedHTML += `
-            <div class="col-2 poster" id="${movie._id}">   
-                <i class="far fa-bookmark"></i>
-                <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" onerror="this.onerror=null;this.src='https://www.fillmurray.com/500/725';">
-            </div>`
-        });
+                <div class="col-2 poster" id="${movie.id}"> 
+                    <a href="movie.html?id=${movie.id}"> 
+                        <p class="score"><i class="fas fa-star"></i> ${movie.vote_average}</p> 
+                        <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" onerror="this.onerror=null;this.src='https://www.fillmurray.com/500/725';">
+                    </a>
+                </div>
+            `
+            
+        });    
+        
         document.getElementById("searchedMovies").innerHTML = searchedHTML;
-    });
-
-    let list = document.getElementById('searchedMovies');
-    addMovie(list);
+    }); 
 }
 
-function addMovie(list) {
+let list = document.getElementById('searchedMovies');
+addMovie(list);
 
-    let el = document.getElementsByClassName('fa-bookmark');
+function addMovie(list) {
 
     list.addEventListener('click', event => {
         event.preventDefault();
 
-        const movieId = el.closest('movie').id;
-        console.log(movieId);
+        const bookmark = document.querySelector(".fa-bookmark");
+        let closestElementId = bookmark.closest(".poster").id;
+
+        console.log(closestElementId)
+        // const movieId = el.closest('poster').id;
+        // console.log(movieId);
     })
     // https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
 }
+
+function getId() {
+    
+}
+
+
+
 
 
 
