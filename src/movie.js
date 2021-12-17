@@ -1,4 +1,6 @@
-console.log('movie called');
+'use strict';
+
+let providerHTML = "";
 
 window.onload = function () {
 
@@ -43,13 +45,23 @@ window.onload = function () {
                 <div class="col-2" id="moviePoster">
                     <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}">
                 </div>
-                <div class="col-9">
-                    <h4>${movie.title} <small>${movie.release_date}</small></h4>
+                <div class="col-7">
+                    <h4>${movie.title} <small>${movie.release_date.substring(0, 4)}</small></h4>
                     <p>${movie.genres[0].name}</p>
+                    <p><i class="far fa-clock"></i> ${movie.runtime}</p>
+                    <small>graph</small>
+                    <h4>Overview</h4>
+                    <p>${movie.overview}</p>
                 </div>
-                <div class="col-1">
+                <div class="col-3">
                     BUTTON
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-12">Details</div>
+                <p>Release Date: ${movie.release_date}</p>
+                <p>Budget $${movie.budget}</p>
+                <p>Revenue: $${movie.revenue}</p>
             </div>
         </div>
         `;
@@ -57,4 +69,29 @@ window.onload = function () {
     }
 
     displayMovie();
+
+    async function getProvider(){   
+        let providerHTML = "";
+
+        const response = await fetch(`https://api.themoviedb.org/3/movie/15/watch/providers?api_key=ace96559b8fb0dd613fdfd48023afa84`);
+        
+        const movieProviders = await response.json();
+        // console.log(movieProviders);
+        const provider = movieProviders.results.BE.buy;
+        console.log(provider);
+
+        provider.forEach(p => {
+            providerHTML += `
+                <article id="card">
+                    ${p.provider_name}
+                </article>
+            `
+        })
+
+        document.getElementById("providers").innerHTML = providerHTML;
+
+    }
+
+    getProvider();
 }
+
