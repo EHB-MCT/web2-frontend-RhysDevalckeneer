@@ -63,7 +63,7 @@ window.onload = function() {
                 console.log('delete')
                 
                 deleteMovie(movieId);
-                renderWatchlist();
+                
             }
         }
         
@@ -82,6 +82,6 @@ window.onload = function() {
             return data;
         })
     }
-    
+    renderWatchlist();
 }
 
