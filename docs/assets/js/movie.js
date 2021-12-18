@@ -16,7 +16,6 @@ window.onload = function () {
         const movie = await response.json();
         // console.log(movie);
 
-        document.getElementById('background').style.backgroundImage = `"url('https://image.tmdb.org/t/p/w500${movie.backdrop_path}')";`;
         document.getElementById('movieImage').src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
         document.getElementById('movieTitle').innerHTML = movie.title
         document.getElementById('movieYear').innerHTML = movie.id;
