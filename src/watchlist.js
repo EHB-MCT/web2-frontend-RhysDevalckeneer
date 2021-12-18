@@ -18,7 +18,8 @@ window.onload = function() {
         data.forEach(movie => {
             moviesHTML += `
                 <div class="col-2">
-                    <section class="poster">
+                    <section class="poster" id="${movie._id}">
+                        <i class="fas fa-trash delete"></i>
                         <a href="movie.html?id=${movie.movie_id}">
                             <img src="${movie.poster_path}">
                         </a>
@@ -50,6 +51,53 @@ window.onload = function() {
         document.getElementById('watchtime').innerHTML = watchedTime;
         document.getElementById('watchList').innerHTML = moviesHTML;
         console.log('rendered!');
+
+        
+
+        /* document.querySelectorAll('.fa-trash').forEach(trashcan => {
+            trashcan.addEventListener('click', event => {
+                event.preventDefault()
+                let element = document.querySelector(".delete");
+                let closest = element.closest(".poster");
+                console.log(closest.id)
+
+                async function deleteMovie() {
+
+                }
+                
+            })
+        }) */
+
+        document.getElementById('watchList').addEventListener('click', (event)=> {
+            const movieId = event.target.closest('.poster').id;
+            console.log(event.target)
+
+            if(movieId){
+                if(event.target.className.indexOf('delete') !== -1){
+                    console.log(movieId)
+                    console.log('delete')
+                    
+                    deleteMovie(movieId)
+                }
+            }
+            
+        })
+        
+    }
+    async function deleteMovie(movieId){
+        fetch(`https://web2-backend-rhysdevalckeneer.herokuapp.com/movies/${movieId}`, {
+            method: "DELETE",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                _id: movieId,
+            })
+        }).then(async data => {
+            console.log(data)
+            return data;
+        })
     }
     renderWatchlist();
 }
+
