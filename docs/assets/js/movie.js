@@ -4,6 +4,7 @@ let providerHTML = "";
 
 window.onload = function () {
 
+
     // let renderPage  = document.getElementById('renderPage');
     // get id from url
     let selectedId = document.location.search.replace(/^.*?\=/, '');
@@ -15,7 +16,7 @@ window.onload = function () {
         const movie = await response.json();
         // console.log(movie);
 
-        document.getElementById('movieImage').src = 'https://image.tmdb.org/t/p/w500'+ movie.poster_path;
+        document.getElementById('movieImage').src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
         document.getElementById('movieTitle').innerHTML = movie.title
         document.getElementById('movieYear').innerHTML = movie.id;
 
@@ -36,6 +37,8 @@ window.onload = function () {
         document.getElementById('budget').innerHTML = movie.budget;
         document.getElementById('revenue').innerHTML = movie.revenue;
     }
+
+    
 
     displayMovie();
 
@@ -62,14 +65,17 @@ window.onload = function () {
 
     getProviders();
 
-    let id = document.location.search.replace(/^.*?\=/, '');
-
-
+    let id;
+    let poster;
+    let runtime;
 
     // add movie
-    async function addMovie(id) {
+    async function addMovie(id, poster, runtime) {
         // console.log('clicked')
         //Get the data from the form fields
+        id = document.location.search.replace(/^.*?\=/, '');
+        poster = document.getElementById('movieImage').src;
+        runtime = document.getElementById('movieRuntime').innerHTML;
 
         fetch(`https://web2-backend-rhysdevalckeneer.herokuapp.com/movies/`, {
             method: "POST",
@@ -77,7 +83,9 @@ window.onload = function () {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                movie_id: id
+                movie_id: id,
+                poster_path: poster,
+                runtime: runtime
             })
         }).then(async data => {
             console.log(data)
@@ -88,9 +96,10 @@ window.onload = function () {
     let addButton = document.getElementById('addMovie');
     addButton.addEventListener("click", event => {
         event.preventDefault();
-        addMovie(id);
+        console.log(poster)
+        addMovie(id, poster, runtime);
     })
-
+    
 }
 
 

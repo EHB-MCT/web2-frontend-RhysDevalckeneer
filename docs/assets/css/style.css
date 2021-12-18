@@ -239,6 +239,10 @@ button {
     object-fit: cover;
 }
 
+#watchList .col-2 {
+    margin: .75rem 0;
+}
+
 #watchList .col-2 img {
     width: 100%;
 }

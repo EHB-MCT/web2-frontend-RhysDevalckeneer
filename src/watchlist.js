@@ -2,6 +2,8 @@
 
 let watchList;
 let moviesHTML = '';
+let watchTime = []
+let totalTime;
 
 window.onload = function() {
 
@@ -18,13 +20,34 @@ window.onload = function() {
                 <div class="col-2">
                     <section class="poster">
                         <a href="movie.html?id=${movie.movie_id}">
-                            <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}">
+                            <img src="${movie.poster_path}">
                         </a>
                     </section>
                 </div>
             `;
+
+            watchTime.push(parseInt(movie.runtime));
         }); 
 
+        // https://appdividend.com/2020/07/24/javascript-sum-array-how-to-find-sum-of-array-in-js/
+        totalTime = watchTime.reduce((a, b) => {
+            return a + b;
+        });
+        console.log('total watchtime: ' + totalTime)
+
+        // https://www.w3resource.com/javascript-exercises/javascript-date-exercise-13.php
+        function timeConvert(n) {
+            var num = n;
+            var hours = (num / 60);
+            var rhours = Math.floor(hours);
+            var minutes = (hours - rhours) * 60;
+            var rminutes = Math.round(minutes);
+            return rhours + " hour(s) and " + rminutes + " minute(s).";
+        }
+
+        let watchedTime = timeConvert(totalTime);
+
+        document.getElementById('watchtime').innerHTML = watchedTime;
         document.getElementById('watchList').innerHTML = moviesHTML;
         console.log('rendered!');
     }
