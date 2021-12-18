@@ -63,7 +63,7 @@ a {
 /** Header **/
 header {
     width: 100vw;
-    height: 55vh;
+    height: 35vh;
     background-image: url('../img/background.jpg');
     background-size: cover;
 }
