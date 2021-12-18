@@ -51,39 +51,23 @@ window.onload = function() {
         document.getElementById('watchtime').innerHTML = watchedTime;
         document.getElementById('watchList').innerHTML = moviesHTML;
         console.log('rendered!');
-
-        
-
-        /* document.querySelectorAll('.fa-trash').forEach(trashcan => {
-            trashcan.addEventListener('click', event => {
-                event.preventDefault()
-                let element = document.querySelector(".delete");
-                let closest = element.closest(".poster");
-                console.log(closest.id)
-
-                async function deleteMovie() {
-
-                }
-                
-            })
-        }) */
-
-        document.getElementById('watchList').addEventListener('click', (event)=> {
-            const movieId = event.target.closest('.poster').id;
-            console.log(event.target)
-
-            if(movieId){
-                if(event.target.className.indexOf('delete') !== -1){
-                    console.log(movieId)
-                    console.log('delete')
-                    
-                    deleteMovie(movieId)
-                }
-            }
-            
-        })
-        
     }
+
+    document.getElementById('watchList').addEventListener('click', (event)=> {
+        const movieId = event.target.closest('.poster').id;
+        console.log(event.target)
+
+        if(movieId){
+            if(event.target.className.indexOf('delete') !== -1){
+                console.log(movieId)
+                console.log('delete')
+                
+                deleteMovie(movieId);
+                renderWatchlist();
+            }
+        }
+        
+    })
     async function deleteMovie(movieId){
         fetch(`https://web2-backend-rhysdevalckeneer.herokuapp.com/movies/${movieId}`, {
             method: "DELETE",
@@ -98,6 +82,6 @@ window.onload = function() {
             return data;
         })
     }
-    renderWatchlist();
+    
 }
 
