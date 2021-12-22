@@ -285,12 +285,25 @@ main {
     margin-right: .5rem;
 }
 
+#other {
+    width: 22%;
+    margin: 1rem 0;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+}
+
+.fa-star {
+    font-size: 18px;
+    color: #facc15;
+}
+
 .fa-clock {
     color: #2563eb;
     font-size: 18px;
 }
 
-#time {
+#time, #score {
     font-size: 18px;
 }
 
@@ -331,6 +344,10 @@ main {
 
 .banner .container .row .col-6 .container .row .col-6 img {
     width: 80%;
+}
+
+.row .col-12 h4 {
+    margin: 2rem 0 1rem 0;
 }
 
 .tcontainer {

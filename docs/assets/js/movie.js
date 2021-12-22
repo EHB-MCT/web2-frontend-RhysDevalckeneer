@@ -30,6 +30,7 @@ window.onload = function () {
         });  
         document.getElementById("genres").innerHTML = genresHTML;
 
+        document.getElementById('movieScore').innerHTML = movie.vote_average;
         document.getElementById('movieRuntime').innerHTML = movie.runtime;
         document.getElementById('movieOverview').innerHTML = movie.overview;
 
