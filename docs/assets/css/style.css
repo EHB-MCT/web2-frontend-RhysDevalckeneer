@@ -243,6 +243,10 @@ button {
     margin: .75rem 0;
 }
 
+#watchList .col-2 .poster {
+    position: relative;
+}
+
 #watchList .col-2 img {
     width: 100%;
 }
@@ -327,6 +331,24 @@ main {
 
 .banner .container .row .col-6 .container .row .col-6 img {
     width: 80%;
+}
+
+.tcontainer {
+    position: absolute;
+    top: 6%;
+    right: 8%;
+    background-color: #fee2e2;
+    display: block;
+    padding: .4rem .25rem;
+    width: 15%;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tcontainer .delete {
+    color: #ef4444;
 }
 
 /** Footer **/

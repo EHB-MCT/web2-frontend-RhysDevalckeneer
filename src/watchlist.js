@@ -19,7 +19,9 @@ window.onload = function() {
             moviesHTML += `
                 <div class="col-2">
                     <section class="poster" id="${movie._id}">
-                        <i class="fas fa-trash delete"></i>
+                        <div class="tcontainer">
+                            <i class="fas fa-trash delete"></i>
+                        </div>
                         <a href="movie.html?id=${movie.movie_id}">
                             <img src="${movie.poster_path}">
                         </a>
