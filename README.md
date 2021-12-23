@@ -19,7 +19,11 @@ Backend can be found [here](https://github.com/EHB-MCT/web2-backend-RhysDevalcke
 [https://gitmoji.dev/](https://gitmoji.dev/)   
 [https://readme.so](https://readme.so)   
 [https://gitignore.io](https://www.toptal.com/developers/gitignore)
-[Horizontal scroll](https://codepen.io/inewton/pen/LeEbVL)
+[Horizontal scroll](https://codepen.io/inewton/pen/LeEbVL)   
+Code snippet from Joachim
+```
+let selectedId = document.location.search.replace(/^.*?\=/, '');
+```
 
 ## Authors
 
