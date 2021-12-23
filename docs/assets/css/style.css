@@ -3,6 +3,9 @@
 }
 body {
     background-color: #FFF;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
 }
 
 h1, h2, h3, h4, h5, h6, p, li a {
@@ -164,7 +167,6 @@ header nav .row .col-4 ul li a i {
     margin: auto;
 }
 
-
 #search .container {
     padding: 0;
     width: 100%;
@@ -193,7 +195,6 @@ header nav .row .col-4 ul li a i {
     overflow: hidden;
     border-radius: 0 4px 4px 0;
 }
-
 
 button {
     width: 100%;
@@ -285,6 +286,12 @@ main {
     margin-right: .5rem;
 }
 
+.searchTitles {
+    margin: 0;
+    margin-top: 1.5rem;
+    text-align: left;
+}
+
 #other {
     width: 22%;
     margin: 1rem 0;
@@ -321,6 +328,16 @@ main {
     align-items: center;
     justify-content: flex-start;
 }
+
+
+.testimonial-group > .row {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .testimonial-group > .row > .col-2 {
+    display: inline-block;
+    float: none;
+  }
 
 #providers .col-1 img {
     width: 100%;
