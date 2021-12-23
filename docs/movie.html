@@ -70,22 +70,34 @@
             </div>
 
             <div class="overviewInfo">
-                <p>Release date: </p>      
+                <p>Release date: </p>&nbsp;    
                 <p id="realeaseDate">Release Date: ${movie.release_date}</p>
             </div>
             <div class="overviewInfo">
-                <p>Budget: </p>
-                <p id="budget">Budget ${movie.budget}</p>
+                <p>Budget: </p>&nbsp;$
+                <p id="budget"> Budget ${movie.budget}</p>
             </div>
             <div class="overviewInfo">
-                <p>Revenue: </p>
-                <p id="revenue">Revenue: $${movie.revenue}</p>
+                <p>Revenue: </p>&nbsp;$
+                <p id="revenue"> Revenue: $${movie.revenue}</p>
+            </div>
+        </div>
+        
+        <div class="row" id="whereWatch">
+            <h4>Where to watch it?</h4> 
+
+            <div class="container">
+                <div class="row" id="providers"></div>
             </div>
         </div>
 
-        <h4>Where to watch it?</h4>
-        <div class="row" id="providers">
-            
+        <div class="row" id="rec">
+            <h4>Recommendations</h4>
+            <div class="container testimonial-group">
+                <div class="row flex-nowrap" id="recommendations">
+
+                </div>
+            </div>
         </div>
     </div>
         

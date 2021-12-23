@@ -64,7 +64,32 @@ window.onload = function () {
         document.getElementById("providers").innerHTML = providerHTML;
     }
 
+    async function getRecs() {
+        const response = await fetch(`https://api.themoviedb.org/3/movie/${selectedId}/recommendations?api_key=ace96559b8fb0dd613fdfd48023afa84&language=en-US&page=1`);
+
+        const result = await response.json();
+        // console.log(provider);
+
+        let data = result.results;
+        // console.log(data);
+
+        let recHTML = "";
+        data.forEach(movie => {
+            recHTML += `
+            <div class="col-2 poster" id="${movie.id}"> 
+                <a href="movie.html?id=${movie.id}"> 
+                    <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" onerror="this.onerror=null;this.src='https://www.fillmurray.com/500/725';">
+                </a>
+            </div>
+            `
+        });
+        document.getElementById("recommendations").innerHTML = recHTML;
+    }
+
+    
+
     getProviders();
+    getRecs();
 
     let id;
     let poster;
