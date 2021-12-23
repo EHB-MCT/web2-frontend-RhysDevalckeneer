@@ -26,6 +26,7 @@ Answer 2
 [https://gitmoji.dev/](https://gitmoji.dev/)   
 [https://readme.so](https://readme.so)   
 [https://gitignore.io](https://www.toptal.com/developers/gitignore)
+[Horizontal scroll](https://codepen.io/inewton/pen/LeEbVL)
 
 ## Authors
 
