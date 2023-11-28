@@ -28,11 +28,5 @@ let selectedId = document.location.search.replace(/^.*?\=/, '');
 ## Authors
 
 [@RhysDevalckeneer](https://github.com/RhysDevalckeneer)   
-[@RhysDevalckeneer2](https://github.com/RhysDevalckeneer2)   
-[@ecs0w](https://github.com/Ecsowdus)    
    
 **NOTE:** All from [me](https://rhys.be/) though
-
-## Side note
-The developing of the project might be streamed on [Twitch](https://www.twitch.tv/ecs0w).   
-Shout out to [Mike Derycke's Youtube channel](https://www.youtube.com/c/MikeDerycke/videos).
